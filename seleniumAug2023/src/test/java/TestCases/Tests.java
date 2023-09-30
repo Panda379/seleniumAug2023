@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import Pages.cartPage;
 import Pages.completePage;
@@ -26,8 +27,8 @@ public class Tests extends baseTest{
 	@Test
 	public void shopping() throws IOException {
 	
-	   // SoftAssert sa = new SoftAssert();
-		//sa.assertEquals(true, false);
+	    SoftAssert sa = new SoftAssert();
+		sa.assertEquals(true, false);
 		loginPage lp = new loginPage(driver);  //className obj = new className();
 	    productsPage pp = new productsPage(driver);
 	    productsDetailPage pdp = new productsDetailPage(driver);
